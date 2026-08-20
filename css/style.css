@@ -2615,3 +2615,780 @@ img {
         display: none;
     }
 }
+/* =========================================================
+   PUBG MOBILE — ESPORTSPULSE PREMIUM GAME PAGE
+   ========================================================= */
+
+.pubg-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(2, 5, 7, .2),
+            #05070a 28%,
+            #05070a 100%
+        );
+    color: #f4f7f8;
+    overflow: hidden;
+}
+
+/* ================= HERO ================= */
+
+.pubg-hero {
+    min-height: 680px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 5, 7, .97) 0%,
+            rgba(2, 5, 7, .78) 38%,
+            rgba(2, 5, 7, .35) 75%,
+            rgba(2, 5, 7, .72) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, .05),
+            #05070a
+        ),
+        url("../assets/pubg-mobile-battlefield.jpg");
+
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(0, 190, 255, .18);
+}
+
+.pubg-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(0, 180, 255, .07),
+            transparent 60%
+        );
+
+    animation: pubgLightSweep 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes pubgLightSweep {
+
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+.pubg-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            rgba(0, 180, 255, .16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(120, 255, 0, .08),
+            transparent 28%
+        );
+
+    pointer-events: none;
+}
+
+.pubg-hero-content {
+    width: min(1180px, 92%);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    padding: 120px 0 100px;
+}
+
+.pubg-hero-content .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 800;
+
+    color: #55d9ff;
+
+    margin-bottom: 18px;
+}
+
+.pubg-hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(58px, 9vw, 125px);
+    line-height: .82;
+
+    font-weight: 1000;
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 30px rgba(0, 180, 255, .18);
+}
+
+.pubg-hero-content h1 span {
+    display: block;
+
+    color: #ffffff;
+
+    -webkit-text-stroke: 1px rgba(0, 210, 255, .25);
+
+    text-shadow:
+        0 0 20px rgba(0, 200, 255, .25);
+}
+
+.pubg-hero-content p {
+    max-width: 650px;
+
+    margin: 28px 0;
+
+    color: rgba(235, 241, 244, .72);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pubg-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pubg-actions .primary-button,
+.pubg-actions .secondary-button {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= QUICK INFO ================= */
+
+.pubg-quick {
+    position: relative;
+    z-index: 5;
+
+    background:
+        rgba(5, 9, 12, .96);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .07);
+}
+
+.pubg-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.pubg-quick-grid > div {
+    min-height: 100px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-right:
+        1px solid rgba(255, 255, 255, .06);
+}
+
+.pubg-quick-grid > div:last-child {
+    border-right: none;
+}
+
+.pubg-quick small {
+    color: rgba(255, 255, 255, .42);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+.pubg-quick strong {
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+/* ================= PAGE NAVIGATION ================= */
+
+.pubg-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background:
+        rgba(3, 6, 9, .88);
+
+    border-bottom:
+        1px solid rgba(0, 180, 255, .13);
+
+    backdrop-filter: blur(18px);
+}
+
+.pubg-navigation nav {
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.pubg-navigation nav::-webkit-scrollbar {
+    display: none;
+}
+
+.pubg-navigation a {
+    flex: 0 0 auto;
+
+    padding: 10px 15px;
+
+    color: rgba(255, 255, 255, .55);
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    border-radius: 5px;
+
+    transition:
+        color .25s ease,
+        background .25s ease;
+}
+
+.pubg-navigation a:hover {
+    color: #ffffff;
+
+    background:
+        rgba(0, 180, 255, .08);
+}
+
+/* ================= SECTIONS ================= */
+
+.pubg-section {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(0, 160, 255, .05),
+            transparent 25%
+        );
+}
+
+.pubg-section h2 {
+    margin-top: 10px;
+}
+
+.pubg-section h2 span {
+    color: #48d8ff;
+}
+
+/* ================= INFO CARD ================= */
+
+.pubg-info-card {
+    margin-top: 35px;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .045),
+            rgba(255, 255, 255, .015)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    border-left:
+        2px solid #24cfff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, .25);
+}
+
+.pubg-info-card p {
+    color: rgba(235, 240, 242, .68);
+
+    line-height: 1.85;
+
+    margin: 0 0 14px;
+}
+
+.pubg-info-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* ================= TIMELINE ================= */
+
+.pubg-timeline {
+    margin-top: 40px;
+
+    display: grid;
+
+    gap: 14px;
+}
+
+.pubg-timeline article {
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+
+    align-items: center;
+
+    padding: 22px;
+
+    background:
+        rgba(255, 255, 255, .025);
+
+    border:
+        1px solid rgba(255, 255, 255, .06);
+
+    border-radius: 10px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+.pubg-timeline article:hover {
+    transform: translateX(7px);
+
+    background:
+        rgba(0, 170, 255, .045);
+
+    border-color:
+        rgba(0, 200, 255, .25);
+}
+
+.pubg-timeline article > span {
+    color: #3dd6ff;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.pubg-timeline h3 {
+    margin: 0 0 5px;
+
+    font-size: 17px;
+}
+
+.pubg-timeline p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, .5);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ================= UPDATE CARDS ================= */
+
+.pubg-update-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 40px;
+}
+
+.pubg-update-card {
+    position: relative;
+
+    padding: 28px;
+
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .045),
+            rgba(255, 255, 255, .012)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, .07);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+.pubg-update-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -40px;
+    top: -40px;
+
+    background:
+        rgba(0, 200, 255, .12);
+
+    filter: blur(25px);
+}
+
+.pubg-update-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(0, 200, 255, .3);
+}
+
+.pubg-update-card > span {
+    color: #42d7ff;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.pubg-update-card h3 {
+    margin: 18px 0 10px;
+
+    font-size: 19px;
+}
+
+.pubg-update-card p {
+    color: rgba(255, 255, 255, .53);
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+.pubg-update-card a {
+    margin-top: auto;
+    padding-top: 20px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* ================= TOURNAMENTS ================= */
+
+.pubg-tournament-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-top: 40px;
+}
+
+.pubg-tournament-grid article {
+    min-height: 160px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0, 180, 255, .08),
+            rgba(255, 255, 255, .018)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, .07);
+
+    border-radius: 10px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.pubg-tournament-grid article:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(0, 200, 255, .28);
+}
+
+.pubg-tournament-grid h3 {
+    margin: 0 0 8px;
+
+    font-size: 21px;
+}
+
+.pubg-tournament-grid p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, .48);
+
+    font-size: 11px;
+}
+
+/* ================= PLACEHOLDER GRID ================= */
+
+.pubg-placeholder-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.pubg-placeholder-grid > div {
+    min-height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: rgba(255, 255, 255, .45);
+
+    background:
+        rgba(255, 255, 255, .025);
+
+    border:
+        1px dashed rgba(255, 255, 255, .1);
+
+    border-radius: 10px;
+}
+
+/* ================= NEWS ================= */
+
+.pubg-news-placeholder {
+    margin-top: 40px;
+
+    min-height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: rgba(255, 255, 255, .45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 180, 255, .045),
+            rgba(255, 255, 255, .015)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, .07);
+
+    border-radius: 12px;
+}
+
+/* ================= OFFICIAL SOURCE ================= */
+
+.pubg-source {
+    padding: 80px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071018,
+            #05070a
+        );
+
+    border-top:
+        1px solid rgba(0, 180, 255, .12);
+}
+
+.pubg-source .container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.pubg-source h2 {
+    margin: 8px 0;
+
+    font-size: 32px;
+}
+
+.pubg-source p {
+    margin: 0;
+
+    max-width: 600px;
+
+    color: rgba(255, 255, 255, .5);
+
+    line-height: 1.7;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    .pubg-hero {
+        min-height: 600px;
+
+        background-position:
+            65% center;
+    }
+
+    .pubg-hero-content {
+        padding:
+            100px 0 70px;
+    }
+
+    .pubg-quick-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .pubg-quick-grid > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .pubg-update-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .pubg-tournament-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .pubg-placeholder-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .pubg-hero {
+        min-height: 570px;
+
+        background-position:
+            62% center;
+    }
+
+    .pubg-hero-content h1 {
+        letter-spacing: -3px;
+    }
+
+    .pubg-hero-content p {
+        font-size: 14px;
+    }
+
+    .pubg-quick-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .pubg-quick-grid > div {
+        min-height: 85px;
+        padding: 18px;
+    }
+
+    .pubg-navigation a {
+        padding:
+            9px 12px;
+
+        font-size: 9px;
+    }
+
+    .pubg-info-card {
+        padding: 22px;
+    }
+
+    .pubg-tournament-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .pubg-source .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pubg-hero::before {
+        animation: none;
+    }
+
+    .pubg-timeline article,
+    .pubg-update-card,
+    .pubg-tournament-grid article {
+        transition: none;
+    }
+
+}

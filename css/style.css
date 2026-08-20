@@ -3478,3 +3478,16 @@ img {
     }
 
 }
+.pubg-home-logo {
+    display: block !important;
+    width: 100% !important;
+    height: 180px !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    margin: 0 0 18px 0 !important;
+    border-radius: 8px;
+}
+
+.pubg-game-card {
+    overflow: hidden !important;
+}

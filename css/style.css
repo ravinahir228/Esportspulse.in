@@ -3433,16 +3433,12 @@ img {
 }
 
 /* Mobile */
-
 @media (max-width: 600px) {
-
-    .game-card .game-logo {
-        height: 115px;
+    .pubg-home-logo {
+        width: 150px !important;
+        height: 85px !important;
     }
-
 }
-/* Mobile */
-
 @media (max-width: 600px) {
 
     .games-grid .game-card .game-logo {

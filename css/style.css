@@ -3441,34 +3441,6 @@ img {
     }
 
 }
-/* FORCE PUBG MOBILE IMAGE SIZE */
-
-.games-grid .game-card .game-logo {
-    width: 100% !important;
-    height: 180px !important;
-
-    margin: 0 0 18px 0 !important;
-
-    display: block !important;
-    overflow: hidden !important;
-
-    padding: 0 !important;
-}
-
-.games-grid .game-card .game-logo img {
-    width: 100% !important;
-    height: 100% !important;
-
-    max-width: none !important;
-    max-height: none !important;
-
-    object-fit: cover !important;
-
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
 /* Mobile */
 
 @media (max-width: 600px) {

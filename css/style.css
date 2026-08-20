@@ -3447,19 +3447,16 @@ img {
 
     .games-grid .game-card .game-logo {
         height: 150px !important;
-    }
-
-}
 .pubg-home-logo {
     display: block !important;
-    width: 100% !important;
-    height: 180px !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    margin: 0 0 18px 0 !important;
-    border-radius: 8px;
-}
 
-.pubg-game-card {
-    overflow: hidden !important;
+    width: 180px !important;
+    height: 100px !important;
+
+    max-width: 80% !important;
+    object-fit: contain !important;
+
+    margin: 0 auto 18px auto !important;
+
+    border-radius: 8px;
 }

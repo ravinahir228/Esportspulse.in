@@ -3390,32 +3390,54 @@ img {
     .pubg-tournament-grid article {
         transition: none;
     }
+/* PUBG MOBILE HOME CARD — LARGE LOGO */
 
-}
-.game-logo {
-    width: 70px;
-    height: 70px;
+.game-card .game-logo {
+    width: 100%;
+    height: 130px;
+
+    margin-bottom: 18px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 18px;
-
     overflow: hidden;
+    border-radius: 8px;
 }
 
-.game-logo img {
+.game-card .game-logo img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+
+    object-fit: cover;
+
+    display: block;
+
+    opacity: 1 !important;
+    visibility: visible !important;
 
     filter:
-        drop-shadow(0 0 12px rgba(0, 190, 255, .3));
+        drop-shadow(0 0 18px rgba(0, 190, 255, .35));
 
-    transition: transform .3s ease;
+    transition:
+        transform .35s ease,
+        filter .35s ease;
 }
 
 .game-card:hover .game-logo img {
-    transform: scale(1.08);
+    transform: scale(1.06);
+
+    filter:
+        drop-shadow(0 0 25px rgba(0, 210, 255, .55));
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .game-card .game-logo {
+        height: 115px;
+    }
+
 }

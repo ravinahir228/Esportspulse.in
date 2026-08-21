@@ -631,7 +631,13 @@
             </div>
 
         </section>
-
+        
+            <div id="blueZoneScan" class="blue-zone-scan">
+            <div class="scan-text">
+              BLUE ZONE SCANNING...
+       </div>
+     </div>
+        
     </main>
 <div id="blueZoneScan" class="blue-zone-scan">
     <div class="scan-text">SCANNING BATTLEGROUNDS...</div>
@@ -647,40 +653,32 @@
     <script src="../../js/main.js"></script>
 
     <style>
-.history-popup{
+.blue-zone-scan{
 display:none;
 position:fixed;
 top:0;
 left:0;
-width:100vw;
-height:100vh;
-background:rgba(0,0,0,0.95);
-z-index:99999;
-overflow-y:auto;
-padding:20px;
-box-sizing:border-box;
+width:100%;
+height:100%;
+background:rgba(0,150,255,.15);
+backdrop-filter:blur(6px);
+z-index:99998;
+justify-content:center;
+align-items:center;
+animation:bluePulse 1s linear infinite;
 }
 
-.history-content{
-max-width:900px;
-margin:50px auto;
-background:#07131b;
-border:1px solid #31d7ff;
-border-radius:15px;
-padding:25px;
-color:#fff;
-position:relative;
+.scan-text{
+font-size:32px;
+font-weight:bold;
+color:#31d7ff;
+text-shadow:0 0 20px #31d7ff;
 }
 
-.history-content button{
-position:absolute;
-top:15px;
-right:15px;
-background:#31d7ff;
-border:none;
-padding:8px 12px;
-cursor:pointer;
-font-size:18px;
+@keyframes bluePulse{
+0%{background:rgba(0,150,255,.05);}
+50%{background:rgba(0,150,255,.25);}
+100%{background:rgba(0,150,255,.05);}
 }
     </style>
 

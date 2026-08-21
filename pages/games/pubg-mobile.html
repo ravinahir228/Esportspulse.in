@@ -43,6 +43,426 @@
        .pubg-hero h1 span {
        color: #31d7ff !important;
      }
+        /* =========================================
+   PUBG MOBILE TEXT & SHAPE DESIGN
+   ========================================= */
+
+:root {
+    --pubg-yellow: #f2a900;
+    --pubg-gold: #ffd34e;
+    --pubg-cyan: #31d7ff;
+    --pubg-white: #f5f5f5;
+    --pubg-muted: #aeb7bd;
+    --pubg-dark: #080b0e;
+}
+
+
+/* ===== ALL PUBG SECTIONS ===== */
+
+.pubg-section {
+    position: relative;
+}
+
+
+/* ===== EYEBROW / SMALL LABEL ===== */
+
+.pubg-section .eyebrow,
+.pubg-hero .eyebrow,
+.pubg-source .eyebrow {
+
+    display: inline-block;
+
+    color: var(--pubg-yellow);
+
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding: 7px 14px;
+
+    background: rgba(242,169,0,0.08);
+
+    border-left: 3px solid var(--pubg-yellow);
+    border-right: 1px solid rgba(242,169,0,0.35);
+
+    box-shadow:
+        0 0 15px rgba(242,169,0,0.08);
+
+}
+
+
+/* ===== MAIN SECTION HEADINGS ===== */
+
+.pubg-section h2,
+.pubg-source h2 {
+
+    color: #ffffff;
+
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,0.8);
+
+}
+
+
+/* ===== HEADING ACCENT ===== */
+
+.pubg-section h2 span {
+
+    color: var(--pubg-yellow);
+
+    text-shadow:
+        0 0 12px rgba(242,169,0,0.35);
+
+}
+
+
+/* ===== INFORMATION CARDS ===== */
+
+.pubg-info-card {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,24,27,0.96),
+            rgba(8,11,14,0.96)
+        );
+
+    border: 1px solid rgba(242,169,0,0.25);
+
+    border-left: 4px solid var(--pubg-yellow);
+
+    padding: 28px;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35),
+        inset 0 0 25px rgba(242,169,0,0.025);
+
+}
+
+
+/* ===== CARD TEXT ===== */
+
+.pubg-info-card p {
+
+    color: var(--pubg-white);
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+}
+
+
+/* ===== UPDATE CARDS ===== */
+
+.pubg-update-card {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19,23,27,0.98),
+            rgba(7,10,13,0.98)
+        );
+
+    border: 1px solid rgba(49,215,255,0.18);
+
+    border-top: 2px solid var(--pubg-cyan);
+
+    padding: 25px;
+
+    border-radius: 5px;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+/* CARD HOVER */
+
+.pubg-update-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: var(--pubg-yellow);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.5),
+        0 0 18px rgba(242,169,0,0.12);
+
+}
+
+
+/* CARD NUMBER / LABEL */
+
+.pubg-update-card > span {
+
+    display: inline-block;
+
+    color: #111;
+
+    background: var(--pubg-yellow);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    padding: 5px 10px;
+
+    margin-bottom: 12px;
+
+    clip-path:
+        polygon(
+            7px 0,
+            100% 0,
+            calc(100% - 7px) 100%,
+            0 100%
+        );
+
+}
+
+
+/* CARD HEADINGS */
+
+.pubg-update-card h3 {
+
+    color: #ffffff;
+
+    font-weight: 850;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.08);
+
+}
+
+
+/* CARD DESCRIPTION */
+
+.pubg-update-card p {
+
+    color: var(--pubg-muted);
+
+    line-height: 1.7;
+
+}
+
+
+/* CARD LINKS */
+
+.pubg-update-card a {
+
+    color: var(--pubg-yellow);
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+}
+
+.pubg-update-card a:hover {
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(242,169,0,0.5);
+
+}
+
+
+/* ===== TOURNAMENT CARDS ===== */
+
+.pubg-tournament-grid article {
+
+    position: relative;
+
+    background: #0b0f12;
+
+    border: 1px solid rgba(242,169,0,0.22);
+
+    border-bottom: 3px solid var(--pubg-yellow);
+
+    padding: 24px;
+
+    border-radius: 4px;
+
+    transition: .25s ease;
+
+}
+
+
+.pubg-tournament-grid article:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.45),
+        0 0 18px rgba(242,169,0,0.12);
+
+}
+
+
+.pubg-tournament-grid h3 {
+
+    color: var(--pubg-yellow);
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+}
+
+
+.pubg-tournament-grid p {
+
+    color: var(--pubg-muted);
+
+}
+
+
+/* ===== PLACEHOLDER BOXES ===== */
+
+.pubg-placeholder-grid > div {
+
+    background:
+        linear-gradient(
+            135deg,
+            #11161a,
+            #080b0e
+        );
+
+    color: var(--pubg-white);
+
+    border: 1px solid rgba(49,215,255,0.18);
+
+    border-left: 3px solid var(--pubg-cyan);
+
+    padding: 22px;
+
+    font-weight: 800;
+
+    transition: .25s ease;
+
+}
+
+
+.pubg-placeholder-grid > div:hover {
+
+    border-left-color: var(--pubg-yellow);
+
+    color: var(--pubg-yellow);
+
+    transform: translateX(4px);
+
+}
+
+
+/* ===== NEWS BOX ===== */
+
+.pubg-news-placeholder {
+
+    background: #0a0e11;
+
+    color: var(--pubg-muted);
+
+    border: 1px solid rgba(49,215,255,0.2);
+
+    border-left: 4px solid var(--pubg-yellow);
+
+    padding: 25px;
+
+}
+
+
+/* ===== HERO DESCRIPTION ===== */
+
+.pubg-hero-content > p {
+
+    color: #d6dce0;
+
+    line-height: 1.8;
+
+}
+
+
+/* ===== HERO TITLE ===== */
+
+.pubg-hero h1 {
+
+    font-weight: 950 !important;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,0.8);
+
+}
+
+.pubg-hero h1 span {
+
+    color: var(--pubg-yellow) !important;
+
+    text-shadow:
+        0 0 18px rgba(242,169,0,0.35);
+
+}
+
+
+/* ===== QUICK INFORMATION ===== */
+
+.pubg-quick-grid small {
+
+    color: var(--pubg-cyan);
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.pubg-quick-grid strong {
+
+    color: #ffffff;
+
+    font-weight: 900;
+
+}
+
+
+/* ===== NAVIGATION ===== */
+
+.pubg-navigation a {
+
+    color: #cbd2d6;
+
+    transition: .2s ease;
+
+}
+
+
+.pubg-navigation a:hover {
+
+    color: var(--pubg-yellow);
+
+    text-shadow:
+        0 0 10px rgba(242,169,0,0.4);
+
+}
 </style>
 </head>
 

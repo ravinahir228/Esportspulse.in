@@ -1345,6 +1345,98 @@ document.getElementById("historyText").innerHTML=text;
 
 }
 
+    function showUpdate(type){
+
+document.getElementById("blueZoneScan").style.display="flex";
+
+document.getElementById("scanStatus").innerHTML=
+"PUBG MOBILE V4.6 BLOODLINE AWAKENING";
+
+setTimeout(function(){
+
+document.getElementById("blueZoneScan").style.display="none";
+
+let text="";
+
+if(type==="v46"){
+
+text=`
+<h2>PUBG MOBILE VERSION 4.6</h2>
+
+<h3>🧛 Bloodline Awakening</h3>
+
+<p>
+A supernatural gothic horror themed mode arriving on Erangel, Livik and Sanhok.
+</p>
+
+<h3>⚔ Vampire Rebirth</h3>
+
+<p>
+Eliminated players receive a second chance and return as powerful vampire entities.
+</p>
+
+<h3>🦇 Twilight Bat Wings</h3>
+
+<p>
+Transform and glide across large areas of the battlefield using special bat wings.
+</p>
+
+<h3>🎯 Hunter Missions</h3>
+
+<p>
+Fight supernatural enemies and complete PvE objectives to obtain premium loot.
+</p>
+
+<h3>⚰ Mysterious Coffins</h3>
+
+<p>
+High-risk coffins can reward legendary weapons after completing challenges.
+</p>
+
+<h3>🚗 Vehicle Combat Changes</h3>
+
+<p>
+Drive-by shooting now has recoil and accuracy penalties.
+Vehicle leaning animations are slower before firing.
+</p>
+
+<h3>🚤 Naval Warfare Improvements</h3>
+
+<p>
+Improved boat handling, seat switching and water item transfers.
+</p>
+
+<h3>🚇 Metro Royale Chapter 25</h3>
+
+<p>
+New 1v1 mode, Firearm Combat Power ranking,
+Path of Glory progression and Super Smooth graphics mode.
+</p>
+
+<h3>🛠 World of Wonder</h3>
+
+<p>
+Object rotation upgrades, half-screen editor and AI Smart Generator.
+</p>
+
+<h3>👗 Cosmetics & Collaborations</h3>
+
+<p>
+Honor Series outfits, Gilt Sets and upcoming collaboration events.
+</p>
+
+<p>
+Release Date: September 9, 2026
+</p>
+`;
+}
+
+document.getElementById("historyText").innerHTML=text;
+document.getElementById("historyPopup").style.display="flex";
+
+},3000);
+
+    } 
 function closeHistory(){
 document.getElementById("historyPopup").style.display="none";
 }

@@ -233,73 +233,51 @@
             class="section pubg-section"
             id="history"
         >
+            <div class="pubg-update-grid">
 
-            <div class="container">
+    <article class="pubg-update-card" onclick="showHistory('development')">
+        <span>01</span>
+        <h3>Development</h3>
+        <p>Tap to explore PUBG MOBILE development history.</p>
+    </article>
 
-            <article>
-    <span>01</span>
+    <article class="pubg-update-card" onclick="showHistory('launch')">
+        <span>02</span>
+        <h3>Global Launch</h3>
+        <p>Tap to explore PUBG MOBILE global launch story.</p>
+    </article>
 
-    <div>
-        <h3>
-            Development
-        </h3>
+    <article class="pubg-update-card" onclick="showHistory('competitive')">
+        <span>03</span>
+        <h3>Competitive Era</h3>
+        <p>Tap to explore PUBG MOBILE esports growth.</p>
+    </article>
 
-        <p>
-            Development and collaboration
-            behind PUBG MOBILE.
-        </p>
+    <article class="pubg-update-card" onclick="showHistory('esports')">
+        <span>04</span>
+        <h3>Global Esports</h3>
+        <p>Tap to explore international tournaments and teams.</p>
+    </article>
+
+</div>
+
+<div id="historyPopup" class="history-popup">
+
+    <div class="history-content">
+
+        <button onclick="closeHistory()">✕</button>
+
+        <div id="historyText"></div>
+
     </div>
-</article>
 
-                    <article>
-    <span>02</span>
+</div>
 
-    <div>
-        <h3>
-            Global Launch
-        </h3>
-
-        <p>
-            PUBG MOBILE launched globally
-            in March 2018.
-        </p>
-    </div>
-</article>
-                
-                   <article>
-    <span>03</span>
-
-    <div>
-        <h3>
-            Competitive Era
-        </h3>
-
-        <p>
-            The game developed into a global
-            competitive esports ecosystem.
-        </p>
-    </div>
-                   </article>
-
-                   <article>
-    <span>04</span>
-
-    <div>
-        <h3>
-            Global Esports
-        </h3>
-
-        <p>
-            International tournaments,
-            professional teams and players
-            became a major part of the ecosystem.
-        </p>
-    </div>
-                   </article> 
-                
-                </div>
-
-            </div>
+<div id="pubgAnimation" class="pubg-animation">
+    <div class="gun">🔫 M416</div>
+    <div class="gun">🔫 AKM</div>
+    <div class="gun">🔫 AUG</div>
+</div>
 
         </section>
 
@@ -648,6 +626,171 @@
 
 
     <script src="../../js/main.js"></script>
+
+    <style>
+
+.history-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+display:none;
+z-index:9999;
+overflow:auto;
+padding:30px;
+}
+
+.history-content{
+max-width:900px;
+margin:auto;
+background:#07131b;
+padding:25px;
+border:1px solid #31d7ff;
+border-radius:15px;
+color:white;
+}
+
+.history-content button{
+float:right;
+background:#31d7ff;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+}
+
+.pubg-animation{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+z-index:10000;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-size:40px;
+color:#31d7ff;
+gap:20px;
+}
+
+.gun{
+animation:fire .4s infinite;
+}
+
+@keyframes fire{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+    </style>
+
+    <script>
+
+function showHistory(type){
+
+document.getElementById("pubgAnimation").style.display="flex";
+
+setTimeout(function(){
+
+document.getElementById("pubgAnimation").style.display="none";
+
+document.getElementById("historyPopup").style.display="block";
+
+let text="";
+
+if(type==="development"){
+
+text=`
+<h2>PUBG MOBILE Development</h2>
+
+<p>
+PUBG MOBILE was developed by Tencent Games in partnership with
+KRAFTON. The goal was to bring the original PUBG experience
+to smartphones while maintaining realistic gameplay, tactical
+combat and battle royale mechanics.
+</p>
+
+<p>
+The game introduced Erangel, Miramar, Sanhok and Livik while
+continuously improving graphics, optimization and esports features.
+</p>
+`;
+
+}
+
+if(type==="launch"){
+
+text=`
+<h2>Global Launch</h2>
+
+<p>
+PUBG MOBILE officially launched worldwide on March 19, 2018.
+The game rapidly became one of the most downloaded mobile games
+in history.
+</p>
+
+<p>
+Its free-to-play model, realistic gunplay and regular updates
+helped build a massive global player base.
+</p>
+`;
+
+}
+
+if(type==="competitive"){
+
+text=`
+<h2>Competitive Era</h2>
+
+<p>
+PUBG MOBILE evolved from a casual game into a professional
+esports title. Regional leagues, official tournaments and
+qualifiers were introduced globally.
+</p>
+
+<p>
+Professional organizations invested heavily in PUBG MOBILE,
+creating one of the largest mobile esports ecosystems.
+</p>
+`;
+
+}
+
+if(type==="esports"){
+
+text=`
+<h2>Global Esports</h2>
+
+<p>
+PUBG MOBILE hosts PMGC, PMWC, PMGO and major regional events.
+Teams from Asia, Europe, Americas, MENA and Africa compete
+for international titles and multi-million dollar prize pools.
+</p>
+
+<p>
+The esports ecosystem now includes hundreds of professional
+teams and players worldwide.
+</p>
+`;
+
+}
+
+document.getElementById("historyText").innerHTML=text;
+
+},5000);
+
+}
+
+function closeHistory(){
+document.getElementById("historyPopup").style.display="none";
+}
+
+    </script>
      
 </body>
 

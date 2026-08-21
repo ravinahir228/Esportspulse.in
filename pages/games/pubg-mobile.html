@@ -273,10 +273,20 @@
 
 </div>
 
-<div id="pubgAnimation" class="pubg-animation">
-    <div class="gun">🔫 M416</div>
-    <div class="gun">🔫 AKM</div>
-    <div class="gun">🔫 AUG</div>
+<div id="blueZoneScan" class="blue-zone-scan">
+
+    <div class="scan-line"></div>
+
+    <div class="scan-content">
+
+        <h1>ESPORTSPULSE DATABASE</h1>
+
+        <h2>SCANNING PUBG ARCHIVES...</h2>
+
+        <p>ACCESSING CLASSIFIED INFORMATION</p>
+
+    </div>
+
 </div>
 
         </section>
@@ -629,62 +639,63 @@
 
     <style>
 
-.history-popup{
+.blue-zone-scan{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.95);
+background:#02060b;
 display:none;
-z-index:9999;
-overflow:auto;
-padding:30px;
-}
-
-.history-content{
-max-width:900px;
-margin:auto;
-background:#07131b;
-padding:25px;
-border:1px solid #31d7ff;
-border-radius:15px;
-color:white;
-}
-
-.history-content button{
-float:right;
-background:#31d7ff;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-}
-
-.pubg-animation{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#000;
-z-index:10000;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-font-size:40px;
+overflow:hidden;
+z-index:10000;
+}
+
+.scan-content{
+text-align:center;
 color:#31d7ff;
-gap:20px;
+z-index:2;
 }
 
-.gun{
-animation:fire .4s infinite;
+.scan-content h1{
+font-size:32px;
+margin-bottom:10px;
 }
 
-@keyframes fire{
-0%{transform:scale(1);}
-50%{transform:scale(1.2);}
-100%{transform:scale(1);}
+.scan-content h2{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.scan-content p{
+letter-spacing:3px;
+opacity:.8;
+}
+
+.scan-line{
+position:absolute;
+top:-20%;
+left:0;
+width:100%;
+height:20%;
+background:linear-gradient(
+to bottom,
+transparent,
+rgba(49,215,255,.45),
+transparent
+);
+animation:scanMove 2s linear infinite;
+}
+
+@keyframes scanMove{
+0%{
+top:-20%;
+}
+100%{
+top:120%;
+}
 }
 
     </style>
@@ -693,11 +704,11 @@ animation:fire .4s infinite;
 
 function showHistory(type){
 
-document.getElementById("pubgAnimation").style.display="flex";
+document.getElementById("blueZoneScan").style.display="flex";
 
 setTimeout(function(){
 
-document.getElementById("pubgAnimation").style.display="none";
+document.getElementById("blueZoneScan").style.display="none";
 
 document.getElementById("historyPopup").style.display="block";
 
@@ -782,7 +793,7 @@ teams and players worldwide.
 
 document.getElementById("historyText").innerHTML=text;
 
-},5000);
+},3000);
 
 }
 

@@ -681,18 +681,83 @@
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,150,255,.15);
+    background:
+    radial-gradient(circle at center,
+    rgba(20,40,55,.85) 0%,
+    rgba(5,8,12,.96) 55%,
+    #000 100%);
+    overflow:hidden;
     backdrop-filter:blur(6px);
     z-index:99998;
     justify-content:center;
     align-items:center;
     animation:bluePulse 1s linear infinite;
 }
+.blue-zone-scan::before{
+    content:"";
+    position:absolute;
+    inset:0;
 
+    background:
+    linear-gradient(rgba(49,215,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49,215,255,.045) 1px, transparent 1px);
+
+    background-size:40px 40px;
+    pointer-events:none;
+}
+
+.blue-zone-scan::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:-5%;
+    width:100%;
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #31d7ff,
+        white,
+        #31d7ff,
+        transparent
+    );
+
+    box-shadow:0 0 20px #31d7ff;
+
+    animation:gamingScanLine 2s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes gamingScanLine{
+    0%{
+        top:-5%;
+    }
+
+    100%{
+        top:105%;
+    }
+}
 .scan-content{
     text-align:center;
     color:#31d7ff;
     z-index:2;
+
+    width:80%;
+    max-width:700px;
+
+    padding:30px;
+
+    background:rgba(2,8,12,.72);
+
+    border:1px solid rgba(49,215,255,.45);
+
+    box-shadow:
+        0 0 30px rgba(49,215,255,.15),
+        inset 0 0 25px rgba(49,215,255,.05);
+
+    backdrop-filter:blur(5px);
+}
 }
 
 .scan-content h1{
@@ -712,17 +777,38 @@ font-weight:bold;
 color:#31d7ff;
 text-shadow:0 0 20px #31d7ff;
 }
-
-@keyframes bluePulse{
-0%{background:rgba(0,150,255,.05);}
-50%{background:rgba(0,150,255,.25);}
-100%{background:rgba(0,150,255,.05);}
-}
+        
     </style>
 
     <script>
 
 function showHistory(type){
+    const audioCtx =
+    new (window.AudioContext || window.webkitAudioContext)();
+
+function gamingBeep(freq, duration, delay = 0){
+
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+
+    osc.type = "square";
+    osc.frequency.value = freq;
+
+    gain.gain.value = 0.025;
+
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+
+    osc.start(audioCtx.currentTime + delay);
+
+    osc.stop(
+        audioCtx.currentTime + delay + duration
+    );
+}
+
+gamingBeep(180,0.12);
+gamingBeep(360,0.12,0.12);
+gamingBeep(720,0.15,0.24);
 
 document.getElementById("blueZoneScan").style.display="flex";
 
